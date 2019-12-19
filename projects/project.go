@@ -46,6 +46,31 @@ func GetProjects(c echo.Context) error {
 	}
 }
 
+func GetProject(c echo.Context) error {
+	id := c.Param("id")
+	client := &http.Client{}
+	req, err := http.NewRequest("GET", GitlabConstant.Url + "/projects/"+ id + GitlabConstant.AccesToken, nil)
+	req.Header.Add("Content-Type", "application/json; charset=utf-8")
+	response, err := client.Do(req)
+
+	if err != nil {
+		fmt.Printf("%s", err)
+		return c.JSON(http.StatusBadRequest, err)
+	} else {
+		defer response.Body.Close()
+		contents, err := ioutil.ReadAll(response.Body)
+
+		if err != nil {
+			fmt.Printf("%s", err)
+			return c.JSON(http.StatusBadRequest, err)
+		}
+
+		var results map[string]interface{}
+		json.Unmarshal(contents, &results)
+		return c.JSON(response.StatusCode, &results)
+	}
+}
+
 func DeleteProject(c echo.Context) error {
 	id := c.Param("id")
 	client := &http.Client{}

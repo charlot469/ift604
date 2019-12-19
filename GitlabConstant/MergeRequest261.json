@@ -1,0 +1,280 @@
+[
+  {
+    "id": 1331,
+    "iid": 4,
+    "project_id": 261,
+    "title": "Feature/intro combat",
+    "description": "",
+    "state": "merged",
+    "created_at": "2019-09-25T14:30:32.551-05:00",
+    "updated_at": "2019-09-25T14:30:36.931-05:00",
+    "merged_by": {
+      "id": 62,
+      "name": "choc2208",
+      "username": "choc2208",
+      "state": "active",
+      "avatar_url": "https://secure.gravatar.com/avatar/d4aaff618a23695196b4e28af974cb96?s=80&d=identicon",
+      "web_url": "https://depot.dinf.usherbrooke.ca/choc2208"
+    },
+    "merged_at": "2019-09-25T14:30:36.980-05:00",
+    "closed_by": null,
+    "closed_at": null,
+    "target_branch": "master",
+    "source_branch": "feature/intro_combat",
+    "user_notes_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "assignee": null,
+    "author": {
+      "id": 62,
+      "name": "choc2208",
+      "username": "choc2208",
+      "state": "active",
+      "avatar_url": "https://secure.gravatar.com/avatar/d4aaff618a23695196b4e28af974cb96?s=80&d=identicon",
+      "web_url": "https://depot.dinf.usherbrooke.ca/choc2208"
+    },
+    "assignees": [
+
+    ],
+    "source_project_id": 261,
+    "target_project_id": 261,
+    "labels": [
+
+    ],
+    "work_in_progress": false,
+    "milestone": null,
+    "merge_when_pipeline_succeeds": false,
+    "merge_status": "can_be_merged",
+    "sha": "8b4a9fbcf510783c28a66a885326471c222d2791",
+    "merge_commit_sha": "042a3455fff11bbbdc2d77ae6076beab4790abfa",
+    "discussion_locked": null,
+    "should_remove_source_branch": null,
+    "force_remove_source_branch": false,
+    "reference": "!4",
+    "web_url": "https://depot.dinf.usherbrooke.ca/projets/a19/eq12/tao/merge_requests/4",
+    "time_stats": {
+      "time_estimate": 0,
+      "total_time_spent": 0,
+      "human_time_estimate": null,
+      "human_total_time_spent": null
+    },
+    "squash": false,
+    "task_completion_status": {
+      "count": 0,
+      "completed_count": 0
+    },
+    "approvals_before_merge": 0
+  },
+  {
+    "id": 1330,
+    "iid": 3,
+    "project_id": 261,
+    "title": "Feature/intro combat",
+    "description": "",
+    "state": "merged",
+    "created_at": "2019-09-25T13:47:37.674-05:00",
+    "updated_at": "2019-09-25T13:47:42.431-05:00",
+    "merged_by": {
+      "id": 62,
+      "name": "choc2208",
+      "username": "choc2208",
+      "state": "active",
+      "avatar_url": "https://secure.gravatar.com/avatar/d4aaff618a23695196b4e28af974cb96?s=80&d=identicon",
+      "web_url": "https://depot.dinf.usherbrooke.ca/choc2208"
+    },
+    "merged_at": "2019-09-25T13:47:42.463-05:00",
+    "closed_by": null,
+    "closed_at": null,
+    "target_branch": "master",
+    "source_branch": "feature/intro_combat",
+    "user_notes_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "assignee": null,
+    "author": {
+      "id": 62,
+      "name": "choc2208",
+      "username": "choc2208",
+      "state": "active",
+      "avatar_url": "https://secure.gravatar.com/avatar/d4aaff618a23695196b4e28af974cb96?s=80&d=identicon",
+      "web_url": "https://depot.dinf.usherbrooke.ca/choc2208"
+    },
+    "assignees": [
+
+    ],
+    "source_project_id": 261,
+    "target_project_id": 261,
+    "labels": [
+
+    ],
+    "work_in_progress": false,
+    "milestone": null,
+    "merge_when_pipeline_succeeds": false,
+    "merge_status": "can_be_merged",
+    "sha": "6c9a33543f9963379549a3fcea65771571166efc",
+    "merge_commit_sha": "9965be750dd6abeb9b20db670f5281237273123f",
+    "discussion_locked": null,
+    "should_remove_source_branch": null,
+    "force_remove_source_branch": false,
+    "reference": "!3",
+    "web_url": "https://depot.dinf.usherbrooke.ca/projets/a19/eq12/tao/merge_requests/3",
+    "time_stats": {
+      "time_estimate": 0,
+      "total_time_spent": 0,
+      "human_time_estimate": null,
+      "human_total_time_spent": null
+    },
+    "squash": false,
+    "task_completion_status": {
+      "count": 0,
+      "completed_count": 0
+    },
+    "approvals_before_merge": 0
+  },
+  {
+    "id": 1312,
+    "iid": 2,
+    "project_id": 261,
+    "title": "Login",
+    "description": "",
+    "state": "merged",
+    "created_at": "2019-09-18T14:51:15.879-05:00",
+    "updated_at": "2019-09-18T14:55:44.266-05:00",
+    "merged_by": {
+      "id": 62,
+      "name": "choc2208",
+      "username": "choc2208",
+      "state": "active",
+      "avatar_url": "https://secure.gravatar.com/avatar/d4aaff618a23695196b4e28af974cb96?s=80&d=identicon",
+      "web_url": "https://depot.dinf.usherbrooke.ca/choc2208"
+    },
+    "merged_at": "2019-09-18T14:55:44.309-05:00",
+    "closed_by": null,
+    "closed_at": null,
+    "target_branch": "master",
+    "source_branch": "feature/serialization",
+    "user_notes_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "assignee": {
+      "id": 65,
+      "name": "robm1917",
+      "username": "robm1917",
+      "state": "active",
+      "avatar_url": "https://secure.gravatar.com/avatar/6c08825294bc532e41ce81f7348489ac?s=80&d=identicon",
+      "web_url": "https://depot.dinf.usherbrooke.ca/robm1917"
+    },
+    "author": {
+      "id": 62,
+      "name": "choc2208",
+      "username": "choc2208",
+      "state": "active",
+      "avatar_url": "https://secure.gravatar.com/avatar/d4aaff618a23695196b4e28af974cb96?s=80&d=identicon",
+      "web_url": "https://depot.dinf.usherbrooke.ca/choc2208"
+    },
+    "assignees": [
+      {
+        "id": 65,
+        "name": "robm1917",
+        "username": "robm1917",
+        "state": "active",
+        "avatar_url": "https://secure.gravatar.com/avatar/6c08825294bc532e41ce81f7348489ac?s=80&d=identicon",
+        "web_url": "https://depot.dinf.usherbrooke.ca/robm1917"
+      }
+    ],
+    "source_project_id": 261,
+    "target_project_id": 261,
+    "labels": [
+
+    ],
+    "work_in_progress": false,
+    "milestone": null,
+    "merge_when_pipeline_succeeds": false,
+    "merge_status": "can_be_merged",
+    "sha": "260367ca9f7cfbbfe5f337b2526eda5dcbe5b7f0",
+    "merge_commit_sha": "71b5bac770c0ffcde9ff7c007112801523c18eea",
+    "discussion_locked": null,
+    "should_remove_source_branch": null,
+    "force_remove_source_branch": true,
+    "reference": "!2",
+    "web_url": "https://depot.dinf.usherbrooke.ca/projets/a19/eq12/tao/merge_requests/2",
+    "time_stats": {
+      "time_estimate": 0,
+      "total_time_spent": 0,
+      "human_time_estimate": null,
+      "human_total_time_spent": null
+    },
+    "squash": false,
+    "task_completion_status": {
+      "count": 0,
+      "completed_count": 0
+    },
+    "approvals_before_merge": 0
+  },
+  {
+    "id": 1302,
+    "iid": 1,
+    "project_id": 261,
+    "title": "Merge dal",
+    "description": "",
+    "state": "merged",
+    "created_at": "2019-09-12T11:37:34.446-05:00",
+    "updated_at": "2019-09-12T11:37:58.968-05:00",
+    "merged_by": {
+      "id": 62,
+      "name": "choc2208",
+      "username": "choc2208",
+      "state": "active",
+      "avatar_url": "https://secure.gravatar.com/avatar/d4aaff618a23695196b4e28af974cb96?s=80&d=identicon",
+      "web_url": "https://depot.dinf.usherbrooke.ca/choc2208"
+    },
+    "merged_at": "2019-09-12T11:37:59.026-05:00",
+    "closed_by": null,
+    "closed_at": null,
+    "target_branch": "master",
+    "source_branch": "feature/DAL",
+    "user_notes_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "assignee": null,
+    "author": {
+      "id": 62,
+      "name": "choc2208",
+      "username": "choc2208",
+      "state": "active",
+      "avatar_url": "https://secure.gravatar.com/avatar/d4aaff618a23695196b4e28af974cb96?s=80&d=identicon",
+      "web_url": "https://depot.dinf.usherbrooke.ca/choc2208"
+    },
+    "assignees": [
+
+    ],
+    "source_project_id": 261,
+    "target_project_id": 261,
+    "labels": [
+
+    ],
+    "work_in_progress": false,
+    "milestone": null,
+    "merge_when_pipeline_succeeds": false,
+    "merge_status": "can_be_merged",
+    "sha": "b5aae0b94b7ab9e5623e75f722c8803c9674258c",
+    "merge_commit_sha": "068f629761dc53073384f0ec286e789333d44fa7",
+    "discussion_locked": null,
+    "should_remove_source_branch": null,
+    "force_remove_source_branch": false,
+    "reference": "!1",
+    "web_url": "https://depot.dinf.usherbrooke.ca/projets/a19/eq12/tao/merge_requests/1",
+    "time_stats": {
+      "time_estimate": 0,
+      "total_time_spent": 0,
+      "human_time_estimate": null,
+      "human_total_time_spent": null
+    },
+    "squash": false,
+    "task_completion_status": {
+      "count": 0,
+      "completed_count": 0
+    },
+    "approvals_before_merge": 0
+  }
+]

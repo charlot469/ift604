@@ -5,12 +5,15 @@ import (
 	"awesomeProject/merge"
 	"awesomeProject/projects"
 	"github.com/labstack/echo"
+	"github.com/labstack/echo/middleware"
 )
 
 //main function
 func main() {
 	// create a new echo instance
 	e := echo.New()
+
+	e.Use(middleware.CORS())
 
 	e.GET("projects/longitude/:longitude/latitude/:latitude", projects.GetProjects)
 	e.DELETE("projects/:id", projects.DeleteProject)

@@ -17,12 +17,12 @@ var officeLong = -72.7103
 var allowedDistance = 100.0
 
 func GetProjects(c echo.Context) error {
-	if !ensureEmplacement(parseFloat(c.QueryParam("longitude")), parseFloat(c.QueryParam("latitude"))){
+	if !ensureEmplacement(parseFloat(c.Param("longitude")), parseFloat(c.Param("latitude"))){
 		return c.JSON(http.StatusForbidden, "user is too far from office")
 	}
 
 	client := &http.Client{}
-	req, err := http.NewRequest("GET", GitlabConstant.Url+"/projects"+GitlabConstant.AccesToken, nil)
+	req, err := http.NewRequest("GET", GitlabConstant.ApiUrl+"/projects"+GitlabConstant.AccesToken, nil)
 
 
 	req.Header.Add("Content-Type", "application/json; charset=utf-8")
@@ -49,7 +49,7 @@ func GetProjects(c echo.Context) error {
 func GetProject(c echo.Context) error {
 	id := c.Param("id")
 	client := &http.Client{}
-	req, err := http.NewRequest("GET", GitlabConstant.Url + "/projects/"+ id + GitlabConstant.AccesToken, nil)
+	req, err := http.NewRequest("GET", GitlabConstant.ApiUrl+ "/projects/"+ id + GitlabConstant.AccesToken, nil)
 	req.Header.Add("Content-Type", "application/json; charset=utf-8")
 	response, err := client.Do(req)
 
@@ -74,7 +74,7 @@ func GetProject(c echo.Context) error {
 func DeleteProject(c echo.Context) error {
 	id := c.Param("id")
 	client := &http.Client{}
-	req, err := http.NewRequest("Delete", GitlabConstant.Url + "/projects/"+ id + GitlabConstant.AccesToken, nil)
+	req, err := http.NewRequest("Delete", GitlabConstant.ApiUrl+ "/projects/"+ id + GitlabConstant.AccesToken, nil)
 	_, err = client.Do(req)
 
 	if err != nil {

@@ -19,7 +19,8 @@ type merge struct
 
 func GetMergeRequests(c echo.Context) error {
 	client := &http.Client{}
-	req, err := http.NewRequest("GET", GitlabConstant.Url+"/projects/"+c.QueryParam(":id")+"/merge_requests/"+GitlabConstant.AccesToken+"&state=opened", nil)
+	var id = c.Param("id")
+	req, err := http.NewRequest("GET", GitlabConstant.ApiUrl+"/projects/"+id+"/merge_requests/"+GitlabConstant.AccesToken+"&state=opened", nil)
 
 
 	req.Header.Add("Content-Type", "application/json; charset=utf-8")
@@ -57,7 +58,7 @@ func AcceptMerge(c echo.Context) (err error) {
 	json.NewEncoder(b).Encode(u)
 
 	client := &http.Client{}
-	req, err := http.NewRequest("Put", GitlabConstant.Url+"/projects/"+c.QueryParam(":id")+"/merge_requests/"+c.QueryParam(":mergeid")+"/merge"+GitlabConstant.AccesToken, b)
+	req, err := http.NewRequest("Put", GitlabConstant.ApiUrl+"/projects/"+c.QueryParam(":id")+"/merge_requests/"+c.QueryParam(":mergeid")+"/merge"+GitlabConstant.AccesToken, b)
 	response, err := client.Do(req)
 
 	if err != nil {

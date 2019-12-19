@@ -1,4 +1,5 @@
 package GitlabConstant
 
-var Url = "https://depot.dinf.usherbrooke.ca/api/v4"
+var Url = "https://depot.dinf.usherbrooke.ca"
+var ApiUrl = Url+"/api/v4"
 var AccesToken = "?private_token=bEwAXtEAzQbQSnXMgMdt"

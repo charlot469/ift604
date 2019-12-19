@@ -11,13 +11,12 @@ import (
 func main() {
 	// create a new echo instance
 	e := echo.New()
-	projects.InitUser()
 
-	e.GET("user/:username/projects/longitude/:longitude/latitude/:latitude", projects.GetProjects)
-	e.DELETE("user/:username/projects/:id", projects.DeleteProject)
+	e.GET("projects/longitude/:longitude/latitude/:latitude", projects.GetProjects)
+	e.DELETE("projects/:id", projects.DeleteProject)
 
-	e.GET("user/:username/projects/:id/MergeRequests", merge.GetMergeRequests)
-	e.PUT("user/:username/projects/:id/MergeRequests/:mergeId/merge", merge.AcceptMerge)
+	e.GET("projects/:id/MergeRequests", merge.GetMergeRequests)
+	e.PUT("projects/:id/MergeRequests/:mergeId/merge", merge.AcceptMerge)
 	e.GET("ws/hook", merge.GitlabHook)
 	e.GET("ws/notification", merge.Notification)
 

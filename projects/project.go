@@ -1,6 +1,7 @@
 package projects
 
 import (
+	"awesomeProject/GitlabConstant"
 	"encoding/json"
 	"fmt"
 	"github.com/labstack/echo"
@@ -8,48 +9,14 @@ import (
 	"math"
 	"net/http"
 	"strconv"
-	"awesomeProject/GitlabConstant"
 )
 
-var UserWithRight []user
-var officeLat = 32.32
-var officeLong = 43.43
+
+var officeLat = 45.4109
+var officeLong = -72.7103
 var allowedDistance = 100.0
 
-type user struct
-{
-	name string `json:"name"`
-}
-
-func InitUser() {
-	client := &http.Client{}
-	req, err := http.NewRequest("GET", GitlabConstant.Url+"/users"+GitlabConstant.AccesToken, nil)
-
-
-	req.Header.Add("Content-Type", "application/json; charset=utf-8")
-	response, err := client.Do(req)
-
-	if err != nil {
-		fmt.Printf("%s", err)
-	} else {
-		defer response.Body.Close()
-		contents, err := ioutil.ReadAll(response.Body)
-		if err != nil {
-			fmt.Printf("%s", err)
-
-		}
-
-		var results []user
-		json.Unmarshal(contents, &results)
-		UserWithRight = results
-	}
-}
-
 func GetProjects(c echo.Context) error {
-	if !ensureUser(c.QueryParam("username")){
-		return c.JSON(http.StatusForbidden, "user has no right")
-	}
-
 	if !ensureEmplacement(parseFloat(c.QueryParam("longitude")), parseFloat(c.QueryParam("latitude"))){
 		return c.JSON(http.StatusForbidden, "user is too far from office")
 	}
@@ -91,15 +58,6 @@ func DeleteProject(c echo.Context) error {
 	}
 
 	return c.NoContent(http.StatusNoContent)
-}
-
-func ensureUser(username string) bool{
-	for _, a := range UserWithRight {
-		if a.name == username {
-			return true
-		}
-	}
-	return false
 }
 
 func ensureEmplacement(long float64, lat float64) bool{

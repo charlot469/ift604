@@ -1,13 +1,13 @@
 package merge
 
 import (
+	"awesomeProject/GitlabConstant"
 	"bytes"
 	"encoding/json"
 	"fmt"
 	"github.com/labstack/echo"
 	"io/ioutil"
 	"net/http"
-	"awesomeProject/GitlabConstant"
 )
 
 type merge struct

@@ -20,7 +20,7 @@ type merge struct
 func GetMergeRequests(c echo.Context) error {
 	client := &http.Client{}
 	var id = c.Param("id")
-	req, err := http.NewRequest("GET", GitlabConstant.ApiUrl+"/projects/"+id+"/merge_requests/"+GitlabConstant.AccesToken+"&state=opened", nil)
+	req, err := http.NewRequest("GET", GitlabConstant.ApiUrl+"/projects/"+id+"/merge_requests/"+GitlabConstant.PrivateToken+"&state=opened", nil)
 
 
 	req.Header.Add("Content-Type", "application/json; charset=utf-8")
@@ -58,7 +58,7 @@ func AcceptMerge(c echo.Context) (err error) {
 	json.NewEncoder(b).Encode(u)
 
 	client := &http.Client{}
-	req, err := http.NewRequest("Put", GitlabConstant.ApiUrl+"/projects/"+c.QueryParam(":id")+"/merge_requests/"+c.QueryParam(":mergeid")+"/merge"+GitlabConstant.AccesToken, b)
+	req, err := http.NewRequest("Put", GitlabConstant.ApiUrl+"/projects/"+c.Param("id")+"/merge_requests/"+c.Param("mergeid")+"/merge"+GitlabConstant.PrivateToken, b)
 	response, err := client.Do(req)
 
 	if err != nil {
@@ -77,4 +77,17 @@ func AcceptMerge(c echo.Context) (err error) {
 		json.Unmarshal(contents, &results)
 		return c.JSON(response.StatusCode, &results)
 	}
+}
+
+func DeleteMerge(c echo.Context) error {
+	client := &http.Client{}
+	req, err := http.NewRequest("Delete", GitlabConstant.ApiUrl+"/projects/"+c.Param("id")+"/merge_requests/"+c.Param("mergeid")+"/merge"+GitlabConstant.PrivateToken, nil)
+	_, err = client.Do(req)
+
+	if err != nil {
+		fmt.Printf("%s", err)
+		return c.JSON(http.StatusBadRequest, err)
+	}
+
+	return c.NoContent(http.StatusNoContent)
 }

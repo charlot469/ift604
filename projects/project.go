@@ -22,7 +22,7 @@ func GetProjects(c echo.Context) error {
 	}
 
 	client := &http.Client{}
-	req, err := http.NewRequest("GET", GitlabConstant.ApiUrl+"/projects"+GitlabConstant.AccesToken, nil)
+	req, err := http.NewRequest("GET", GitlabConstant.ApiUrl+"/projects"+GitlabConstant.PrivateToken, nil)
 
 
 	req.Header.Add("Content-Type", "application/json; charset=utf-8")
@@ -49,7 +49,7 @@ func GetProjects(c echo.Context) error {
 func GetProject(c echo.Context) error {
 	id := c.Param("id")
 	client := &http.Client{}
-	req, err := http.NewRequest("GET", GitlabConstant.ApiUrl+ "/projects/"+ id + GitlabConstant.AccesToken, nil)
+	req, err := http.NewRequest("GET", GitlabConstant.ApiUrl+ "/projects/"+ id + GitlabConstant.PrivateToken, nil)
 	req.Header.Add("Content-Type", "application/json; charset=utf-8")
 	response, err := client.Do(req)
 
@@ -74,7 +74,7 @@ func GetProject(c echo.Context) error {
 func DeleteProject(c echo.Context) error {
 	id := c.Param("id")
 	client := &http.Client{}
-	req, err := http.NewRequest("Delete", GitlabConstant.ApiUrl+ "/projects/"+ id + GitlabConstant.AccesToken, nil)
+	req, err := http.NewRequest("Delete", GitlabConstant.ApiUrl+ "/projects/"+ id + GitlabConstant.PrivateToken, nil)
 	_, err = client.Do(req)
 
 	if err != nil {

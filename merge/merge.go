@@ -81,13 +81,15 @@ func AcceptMerge(c echo.Context) (err error) {
 
 func DeleteMerge(c echo.Context) error {
 	client := &http.Client{}
-	req, err := http.NewRequest("Delete", GitlabConstant.ApiUrl+"/projects/"+c.Param("id")+"/merge_requests/"+c.Param("mergeid")+"/merge"+GitlabConstant.PrivateToken, nil)
-	_, err = client.Do(req)
+	req, err := http.NewRequest("Delete", GitlabConstant.ApiUrl+"/projects/"+c.Param("id")+"/merge_requests/"+c.Param("mergeId")+GitlabConstant.PrivateToken, nil)
 
-	if err != nil {
+	response, error := client.Do(req)
+
+	if error != nil {
 		fmt.Printf("%s", err)
 		return c.JSON(http.StatusBadRequest, err)
 	}
 
-	return c.NoContent(http.StatusNoContent)
+
+	return c.JSON(response.StatusCode, err)
 }

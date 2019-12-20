@@ -21,7 +21,7 @@ func main() {
 
 	e.GET("projects/:id/MergeRequests", merge.GetMergeRequests)
 	e.PUT("projects/:id/MergeRequests/:mergeId/merge", merge.AcceptMerge)
-	e.DELETE("/projects/:id/MergeRequests/:mergeId", merge.DeleteMerge)
+	e.DELETE("projects/:id/MergeRequests/:mergeId", merge.DeleteMerge)
 
 	e.GET("ws/hook", merge.GitlabHook)
 	e.GET("ws/notification", merge.Notification)
